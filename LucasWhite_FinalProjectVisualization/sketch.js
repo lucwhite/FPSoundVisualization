@@ -25,11 +25,12 @@ function duplicate() {
     for (var y = 0; y < count; y++) {
       push();
       translate(x * size / 1.5, y * size / 1.5);
-
+      
+      //stroke(255,0,0);
       //ellipse(0, 0, size, size);
       //strokeWeight(4);
       var v = int(255 * colorCount / 400.0)
-      if (value == 0) rotate(-(frameCount * 0.02 + x / 2 + y / 2));
+      if (value === 0) translate(-(frameCount % 15 + x % 2 + y % 2),(frameCount % 15 + x % 2 + y % 2));
       if (value == 1) rotate(-(frameCount * 0.04 + x / 2 + y / 2));
       if (value == 2) rotate(-(frameCount * 0.06 + x / 2 + y / 2));
       if (value == 3) rotate(-(frameCount * 0.08 + x / 2 + y / 2));
